@@ -1,5 +1,6 @@
-from sanic import Sanic, Request
+from sanic import Sanic
 from sanic import response
+from sanic.request import Request
 from sanic.response import HTTPResponse
 import httpx
 
