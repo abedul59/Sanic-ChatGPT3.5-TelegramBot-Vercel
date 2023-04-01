@@ -1,5 +1,4 @@
-from sanic import Sanic, Request, HTTPResponse
-from sanic import response
+from sanic import Sanic, HTTPResponse, Request, response
 
 import re
 import json
