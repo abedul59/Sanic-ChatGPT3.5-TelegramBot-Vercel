@@ -1,4 +1,4 @@
-sanic==19.6.0
+sanic==22.6.1
 uvicorn==0.20.0
 openai==0.27.0
 httpx
