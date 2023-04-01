@@ -1,4 +1,6 @@
-from sanic import Sanic, HTTPResponse, Request, response
+from sanic import Sanic, Request
+from sanic import response
+from sanic.response import HTTPResponse
 import httpx
 
 import re
