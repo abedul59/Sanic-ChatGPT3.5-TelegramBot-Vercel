@@ -1,4 +1,5 @@
 from sanic import Sanic, HTTPResponse, Request, response
+import httpx
 
 import re
 import json
