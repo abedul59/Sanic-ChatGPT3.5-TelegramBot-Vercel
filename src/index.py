@@ -1,5 +1,4 @@
-from sanic import Sanic, Request
-from sanic import response
+from sanic import Sanic
 from sanic.response import HTTPResponse
 from sanic.request import Request
 from sanic import response
