@@ -62,10 +62,12 @@ async def callback(request: Request) -> HTTPResponse:
 '''
 @app.post("/callback")
 async def callback(request: Request) -> HTTPResponse:
-    req_data = await request.json()
-    chat_id = req_data['message']['chat']['id']
-    text = req_data['message']['text']
+    data = json.loads(request.body)
+    chat_id = data['message']['chat']['id']
+    text = data['message']['text']
     ai_reply_response = chatgpt.get_response(text)  
+
     await client.get(f"{BASE_URL}/sendMessage?chat_id={chat_id}&text={ai_reply_response}")
+
     return response.text("OK")
 
