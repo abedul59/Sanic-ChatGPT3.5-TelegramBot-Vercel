@@ -55,16 +55,7 @@ chatgpt = ChatGPT()
 @app.route("/")
 async def handle_request(request: Request) -> HTTPResponse:
     return response.text("Hello!")
-'''
-@app.post("/callback")
-async def callback(request: Request) -> HTTPResponse:
-    data = await request.json()
-    chat_id = data["message"]["chat"]["id"]
-    text = data["message"]["text"]
-    ai_reply_response = chatgpt.get_response(text)
-    await client.get(f"{BASE_URL}/sendMessage?chat_id={chat_id}&text={ai_reply_response}")
-    return response.text("OK")
-'''
+
 @app.post("/callback")
 async def callback(request: Request) -> HTTPResponse:
     data = json.loads(request.body)
